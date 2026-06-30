@@ -85,8 +85,8 @@
                 <div class="relative group">
                     <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
                     <div class="relative w-64 h-64 md:w-80 md:h-80 bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden shadow-2xl">
-                        <!-- Path disesuaikan menggunakan / dan nama file baru -->
-                       <img src="foto-bimo.jpeg" alt="Immanuel Bimoputero" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-105" style="object-position: center 20%;">
+                        <!-- Path sudah diperbaiki langsung mengarah ke file utama tanpa sub-folder -->
+                        <img src="foto-bimo.jpeg" alt="Immanuel Bimoputero" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-105" style="object-position: center 20%;">
                     </div>
                 </div>
             </div>
@@ -249,18 +249,23 @@
 
     <!-- HUBUNGI SAYA -->
     <section id="kontak" class="py-24 px-6 bg-gray-950 text-center relative z-10">
-        <div class="max-w-2xl mx-auto" data-aos="zoom-in">
+        <div class="max-w-4xl mx-auto" data-aos="zoom-in">
             <h2 class="text-xs uppercase tracking-widest text-blue-500 font-bold mb-1">Hubungi Saya</h2>
             <h3 class="text-3xl font-bold mb-8">Saluran Komunikasi</h3>
             
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300 text-sm">
-                <a href="mailto:immanuelbimo29nov@gmail.com" class="bg-gray-900 border border-gray-800 p-4 rounded-xl hover:text-blue-400 transition-colors flex flex-col items-center gap-2">
-                    <i class="fa-solid fa-envelope text-xl text-blue-500"></i> immanuelbimo29nov@gmail.com
+            <!-- Grid disesuaikan menjadi 4 kolom untuk menambahkan Instagram -->
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 text-gray-300 text-sm">
+                <a href="mailto:immanuelbimo29nov@gmail.com" class="bg-gray-900 border border-gray-800 p-4 rounded-xl hover:text-blue-400 transition-colors flex flex-col items-center justify-center gap-2">
+                    <i class="fa-solid fa-envelope text-xl text-blue-500"></i> <span class="break-all">immanuelbimo29nov@gmail.com</span>
                 </a>
-                <a href="https://linkedin.com/in/immanuel-bimoputero" target="_blank" class="bg-gray-900 border border-gray-800 p-4 rounded-xl hover:text-blue-400 transition-colors flex flex-col items-center gap-2">
+                <a href="https://linkedin.com/in/immanuel-bimoputero" target="_blank" class="bg-gray-900 border border-gray-800 p-4 rounded-xl hover:text-blue-400 transition-colors flex flex-col items-center justify-center gap-2">
                     <i class="fa-brands fa-linkedin text-xl text-blue-400"></i> LinkedIn Profile
                 </a>
-                <div class="bg-gray-900 border border-gray-800 p-4 rounded-xl flex flex-col items-center gap-2">
+                <!-- Kotak Instagram Baru -->
+                <a href="https://instagram.com/immanoel_cah" target="_blank" class="bg-gray-900 border border-gray-800 p-4 rounded-xl hover:text-pink-400 transition-colors flex flex-col items-center justify-center gap-2">
+                    <i class="fa-brands fa-instagram text-xl text-pink-500"></i> @immanoel_cah
+                </a>
+                <div class="bg-gray-900 border border-gray-800 p-4 rounded-xl flex flex-col items-center justify-center gap-2">
                     <i class="fa-solid fa-location-dot text-xl text-red-500"></i> Semarang, Jawa Tengah
                 </div>
             </div>
