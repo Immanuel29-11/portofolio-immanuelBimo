@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immanuel Bimoputero BW | Frontend, UI/UX & IoT Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS (Animate on Scroll) Library CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 8s infinite alternate ease-in-out;
+        }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+        
+        .glow-card:hover {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans overflow-x-hidden">
+
+    <!-- LATAR BELAKANG ELEGAN -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-15">
+        <div class="absolute top-10 left-10 w-80 h-80 bg-blue-600 rounded-full filter blur-3xl animate-blob"></div>
+        <div class="absolute top-1/3 right-10 w-96 h-96 bg-purple-600 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-10 left-1/4 w-80 h-80 bg-emerald-600 rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-gray-950/80 backdrop-blur-lg border-b border-gray-800/60 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider text-blue-400 hover:scale-105 transition-transform duration-300">IB.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
+                <a href="#tentang" class="hover:text-blue-400 transition-colors">Tentang</a>
+                <a href="#keahlian" class="hover:text-blue-400 transition-colors">Keahlian</a>
+                <a href="#proyek" class="hover:text-blue-400 transition-colors">Proyek</a>
+                <a href="#organisasi" class="hover:text-blue-400 transition-colors">Dokumentasi</a>
+                <a href="#kontak" class="hover:text-blue-400 transition-colors">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center pt-28 md:pt-16 px-6 z-10 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center w-full">
+            
+            <!-- Kolom Kiri: Teks Perkenalan -->
+            <div class="md:col-span-7 text-center md:text-left order-2 md:order-1">
+                <div class="inline-flex items-center gap-2 bg-gray-900 border border-gray-800 px-4 py-2 rounded-full text-xs font-medium text-blue-400 mb-6 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Sarjana Komputer | UI/UX, Frontend & IoT Integration
+                </div>
+                
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4" data-aos="fade-right" data-aos-duration="1000">
+                    Immanuel Bimoputero Bayu Wicaksono, <span class="text-blue-400">S.Kom.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-400 font-light mb-8 h-12 md:h-8">
+                    <span id="typed-role"></span>
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <a href="mailto:immanuelbimo29nov@gmail.com" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-blue-900/40 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> Hubungi Saya
+                    </a>
+                    <a href="#proyek" class="w-full sm:w-auto bg-gray-900 hover:bg-gray-800 border border-gray-800 hover:border-gray-700 text-gray-300 font-medium px-6 py-3 rounded-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        Lihat Proyek <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan: Foto Profil Pro -->
+            <div class="md:col-span-5 flex justify-center order-1 md:order-2" data-aos="fade-left" data-aos-duration="1000">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden shadow-2xl">
+                        <!-- Path disesuaikan menggunakan / dan nama file baru -->
+                        <img src="foto/foto-bimo.jpeg" alt="Immanuel Bimoputero" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-105" style="object-position: center 20%;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- TENTANG SAYA -->
+    <section id="tentang" class="py-24 px-6 max-w-4xl mx-auto relative z-10">
+        <div class="border-l-4 border-blue-500 pl-4 mb-8" data-aos="fade-right">
+            <h2 class="text-xs uppercase tracking-widest text-blue-500 font-bold mb-1">Profil Profesional</h2>
+            <h3 class="text-3xl font-bold">Tentang Saya</h3>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="200">
+            <p>
+                Lulusan <strong class="text-white">Teknik Informatika</strong> dari <strong class="text-blue-400">Soegijapranata Catholic University</strong> dengan IPK <strong class="text-white">3.46/4.00</strong> (Predikat Sangat Memuaskan). Memiliki spesialisasi dalam menjembatani teknologi kecerdasan buatan (AI/NLP), interaktivitas Internet of Things (IoT), serta implementasi desain antarmuka pengguna (UI/UX).
+            </p>
+            <p>
+                Fokus utama saya adalah mengembangkan **Sisi Frontend & Representasi Visual** produk digital. Saya ahli dalam menerjemahkan pemrosesan data model AI atau sensor hardware IoT ke dalam tampilan antarmuka web yang interaktif, responsif, serta mudah dipahami oleh pengguna akhir.
+            </p>
+        </div>
+    </section>
+
+    <!-- KEAHLIAN TEKNIS -->
+    <section id="keahlian" class="py-24 px-6 bg-gray-900/40 backdrop-blur-sm relative z-10 border-y border-gray-800/80">
+        <div class="max-w-5xl mx-auto">
+            <div class="border-l-4 border-blue-500 pl-4 mb-12" data-aos="fade-right">
+                <h2 class="text-xs uppercase tracking-widest text-purple-500 font-bold mb-1">Kompetensi Inti</h2>
+                <h3 class="text-3xl font-bold">Keahlian & Tools</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Bahasa Pemrograman -->
+                <div class="bg-gray-900/80 p-6 rounded-xl border border-gray-800 transition-all duration-300 transform hover:-translate-y-2 glow-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-400 text-2xl mb-4"><i class="fa-solid fa-code"></i></div>
+                    <h4 class="text-xl font-semibold mb-3 text-white">Bahasa Pemrograman</h4>
+                    <div class="flex flex-wrap gap-2 text-sm text-gray-400">
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800 text-blue-300">JavaScript</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800 text-blue-300">HTML5 / CSS3</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">Python</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">PHP (Laravel)</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Frameworks -->
+                <div class="bg-gray-900/80 p-6 rounded-xl border border-gray-800 transition-all duration-300 transform hover:-translate-y-2 glow-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-purple-400 text-2xl mb-4"><i class="fa-solid fa-cubes"></i></div>
+                    <h4 class="text-xl font-semibold mb-3 text-white">Ekosistem & Tools</h4>
+                    <div class="flex flex-wrap gap-2 text-sm text-gray-400">
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">TensorFlow</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">Keras</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">NLTK</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">Scikit-learn</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">MySQL</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Spesialisasi / Fokus Kerja -->
+                <div class="bg-gray-900/80 p-6 rounded-xl border border-gray-800 transition-all duration-300 transform hover:-translate-y-2 glow-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-emerald-400 text-2xl mb-4"><i class="fa-solid fa-bullseye"></i></div>
+                    <h4 class="text-xl font-semibold mb-3 text-white">Fokus Kompetensi</h4>
+                    <div class="flex flex-wrap gap-2 text-sm text-gray-400">
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-emerald-500/40 text-emerald-300">UI/UX Design</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">Frontend Data Display</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">IoT Integration</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">Natural Language Processing</span>
+                        <span class="bg-gray-950 px-3 py-1.5 rounded-md border border-gray-800">Deep Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYEK PILIHAN -->
+    <section id="proyek" class="py-24 px-6 max-w-5xl mx-auto relative z-10">
+        <div class="border-l-4 border-blue-500 pl-4 mb-12" data-aos="fade-right">
+            <h2 class="text-xs uppercase tracking-widest text-emerald-500 font-bold mb-1">Portofolio Utama</h2>
+            <h3 class="text-3xl font-bold">Implementasi Proyek</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Proyek 1: Skripsi Analisis Sentimen -->
+            <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:border-gray-700 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-400">AI & Web Analytics (2025)</span>
+                    <h4 class="text-lg font-bold mt-2 mb-2 text-white">Analisis Sentimen Twitter "Joko Widodo"</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Mengembangkan visualisasi komparasi algoritma model **LSTM dan Bi-LSTM** untuk klasifikasi opini publik berbasis teks di Twitter, berhasil meraih metrik akurasi optimal sebesar **73.05%**.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-1 pt-2">
+                    <span class="bg-gray-950 text-[11px] text-gray-400 px-2 py-0.5 rounded border border-gray-800">NLP</span>
+                    <span class="bg-gray-950 text-[11px] text-gray-400 px-2 py-0.5 rounded border border-gray-800">LSTM</span>
+                    <span class="bg-gray-950 text-[11px] text-gray-400 px-2 py-0.5 rounded border border-gray-800">Python</span>
+                </div>
+            </div>
+
+            <!-- Proyek 2: Monitoring IoT -->
+            <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:border-gray-700 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">IoT Integration (2023)</span>
+                    <h4 class="text-lg font-bold mt-2 mb-2 text-white">Monitoring Kelembaban & Suhu Real-Time</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Membangun sistem integrasi data hardware IoT untuk pelacakan suhu dan kelembaban udara secara langsung, yang terhubung stabil dengan repositori database log.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-1 pt-2">
+                    <span class="bg-gray-950 text-[11px] text-gray-400 px-2 py-0.5 rounded border border-gray-800">IoT</span>
+                    <span class="bg-gray-950 text-[11px] text-gray-400 px-2 py-0.5 rounded border border-gray-800">Python</span>
+                    <span class="bg-gray-950 text-[11px] text-gray-400 px-2 py-0.5 rounded border border-gray-800">Database</span>
+                </div>
+            </div>
+
+            <!-- Proyek 3: UI/UX Web Gereja -->
+            <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:border-gray-700 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-purple-400">UI/UX Design (2023)</span>
+                    <h4 class="text-lg font-bold mt-2 mb-2 text-white">User-Centered Website Design Gereja</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Merancang purwarupa arsitektur informasi dan layout antarmuka situs web informasi ibadah yang berfokus penuh pada kenyamanan serta pengalaman akses jemaat (*user experience*).
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-1 pt-2">
+                    <span class="bg-gray-950 text-[11px] text-gray-400 px-2 py-0.5 rounded border border-gray-800">UI/UX</span>
+                    <span class="bg-gray-950 text-[11px] text-gray-400 px-2 py-0.5 rounded border border-gray-800">Wireframing</span>
+                    <span class="bg-gray-950 text-[11px] text-gray-400 px-2 py-0.5 rounded border border-gray-800">Web Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORGANISASI & DOKUMENTASI VISUAL -->
+    <section id="organisasi" class="py-20 px-6 max-w-5xl mx-auto relative z-10 border-t border-gray-900">
+        <div class="border-l-4 border-blue-500 pl-4 mb-10" data-aos="fade-right">
+            <h2 class="text-xs uppercase tracking-widest text-purple-500 font-bold mb-1">Pengalaman Tambahan</h2>
+            <h3 class="text-3xl font-bold">Dokumentasi Visual & Kegiatan</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800/80">
+                <span class="text-xs text-blue-400 font-bold">2025</span>
+                <h5 class="text-sm font-semibold text-white mt-1">HUT Keuskupan Agung Semarang</h5>
+            </div>
+            <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800/80">
+                <span class="text-xs text-blue-400 font-bold">2023</span>
+                <h5 class="text-sm font-semibold text-white mt-1">PTMB SCU - Religiusitas</h5>
+            </div>
+            <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800/80">
+                <span class="text-xs text-blue-400 font-bold">2023</span>
+                <h5 class="text-sm font-semibold text-white mt-1">Misa Hari Anak Misioner</h5>
+            </div>
+            <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800/80">
+                <span class="text-xs text-blue-400 font-bold">2022</span>
+                <h5 class="text-sm font-semibold text-white mt-1">HUT Kevikepan Semarang</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- HUBUNGI SAYA -->
+    <section id="kontak" class="py-24 px-6 bg-gray-950 text-center relative z-10">
+        <div class="max-w-2xl mx-auto" data-aos="zoom-in">
+            <h2 class="text-xs uppercase tracking-widest text-blue-500 font-bold mb-1">Hubungi Saya</h2>
+            <h3 class="text-3xl font-bold mb-8">Saluran Komunikasi</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300 text-sm">
+                <a href="mailto:immanuelbimo29nov@gmail.com" class="bg-gray-900 border border-gray-800 p-4 rounded-xl hover:text-blue-400 transition-colors flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-envelope text-xl text-blue-500"></i> immanuelbimo29nov@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/immanuel-bimoputero" target="_blank" class="bg-gray-900 border border-gray-800 p-4 rounded-xl hover:text-blue-400 transition-colors flex flex-col items-center gap-2">
+                    <i class="fa-brands fa-linkedin text-xl text-blue-400"></i> LinkedIn Profile
+                </a>
+                <div class="bg-gray-900 border border-gray-800 p-4 rounded-xl flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-xl text-red-500"></i> Semarang, Jawa Tengah
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-6 border-t border-gray-900 text-center text-xs text-gray-600 relative z-10">
+        <p>&copy; 2026 Immanuel Bimoputero BW. Portofolio Terintegrasi.</p>
+    </footer>
+
+    <!-- ANIMATION JAVASCRIPT -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        AOS.init({
+            duration: 850,
+            once: true,
+            offset: 120
+        });
+
+        var typed = new Typed('#typed-role', {
+            strings: [
+                'UI/UX & Frontend Implementer',
+                'AI & IoT Integration Specialist',
+                'Informatics Engineering Graduate (S.Kom.)'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2200,
+            loop: true
+        });
+    </script>
+</body>
+</html>
